@@ -71,7 +71,7 @@ function draw(){
       octave = 7
     }
   }
-  text("octave: "+octave, 300, 25)
+  text("octave: "+octave, 305, 25)
 }
 
 function mouseReleased() {

@@ -38,10 +38,11 @@ function draw(){
   
   val = slider.value();
   _val = map(val, 0, 100, 0, 1);
+  textSize(14);
   text("valum: "+_val, 225, 25)
     
   for (var n = 0; n < sounds.length; n++){
-    if(-105<= rotationY && rotationY < -75){
+    if(-90<= rotationY && rotationY < -75){
       soundsChange[n] = sounds[n]/8
       octave = 1
     }
@@ -65,16 +66,12 @@ function draw(){
       soundsChange[n] = sounds[n]*4
       octave = 6
     }
-    if(75<= rotationY && rotationY < 105){
+    if(75<= rotationY && rotationY < 90){
       soundsChange[n] = sounds[n]*8
       octave = 7
     }
-    if(105<= rotationY && rotationY < 135){
-      soundsChange[n] = sounds[n]*16
-      octave = 8
-    }
   }
-  text("octave: "+octave, 290, 25)
+  text("octave: "+octave, 300, 25)
 }
 
 function mouseReleased() {

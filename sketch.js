@@ -72,6 +72,61 @@ function draw(){
     }
   }
   text("octave: "+octave, 305, 25)
+  
+  for(var m = 0; m < touches.length; m++){
+    if(40 < touches[m].y && touches[m].y < displayHeight/2){
+      if(w/2+10 < touches[m].x && touches[m].x < (w/2+10)+blackWidth){
+        fill(111);
+        rect(w/2+10, 40, blackWidth, displayHeight/2-40);
+      }
+      if((w+2*w)/2+10 < touches[m].x && touches[m].x < ((w+2*w)/2+10)+blackWidth){
+        fill(111);
+        rect((w+2*w)/2+10, 40, blackWidth, displayHeight/2-40);
+      }
+      if((3*w+4*w)/2+10 < touches[m].x && touches[m].x < ((3*w+4*w)/2+10)+blackWidth){
+        fill(111);
+        rect((3*w+4*w)/2+10, 40, blackWidth, displayHeight/2-40);
+      }
+      if((4*w+5*w)/2+10 < touches[m].x && touches[m].x < ((4*w+5*w)/2+10)+blackWidth){
+        fill(111);
+        rect((4*w+5*w)/2+10, 40, blackWidth, displayHeight/2-40);
+      }
+      if((5*w+6*w)/2+10 < touches[m].x && touches[m].x < ((5*w+6*w)/2+10)+blackWidth){
+        fill(111);
+        rect((5*w+6*w)/2+10, 40, blackWidth, displayHeight/2-40);
+      }
+    }
+    if(displayHeight/2 < touches[m].y && touches[m].y < displayHeight-1 ){
+      if(0 < touches[m].x && touches[m].x < w-1){
+        fill(111);
+        rect(0, displayHeight/2, w-1, displayHeight-1);
+      }
+      if(w < touches[m].x && touches[m].x < (2*w)-1){
+        fill(111);
+        rect(w, displayHeight/2, w-1, displayHeight-1);
+      }
+      if(2*w < touches[m].x && touches[m].x < (3*w)-1){
+        fill(111);
+        rect(2*w, displayHeight/2, w-1, displayHeight-1);
+      }
+      if(3*w < touches[m].x && touches[m].x < (4*w)-1){
+        fill(111);
+        rect(3*w, displayHeight/2, w-1, displayHeight-1);
+      }
+      if(4*w < touches[m].x && touches[m].x < (5*w)-1){
+        fill(111);
+        rect(4*w, displayHeight/2, w-1, displayHeight-1);
+      }
+      if(5*w < touches[m].x && touches[m].x < (6*w)-1){
+        fill(111);
+        rect(5*w, displayHeight/2, w-1, displayHeight-1);
+      }
+      if(6*w < touches[m].x && touches[m].x < (7*w)-1){
+        fill(111);
+        rect(6*w, displayHeight/2, w-1, displayHeight-1);
+      }
+    }
+  }
 }
 
 function mouseReleased() {
@@ -88,7 +143,7 @@ function touchStarted(){
       wave.freq(soundsChange[key]);
       wave.amp(_val, 0.5);
     }
-    if(40 < touches[j].y && touches[j].y < displayHeight/2-40){
+    if(40 < touches[j].y && touches[j].y < displayHeight/2){
       if(w/2+10 < touches[j].x && touches[j].x < (w/2+10)+blackWidth){
         wave.start();
         wave.freq(soundsChange[7]);

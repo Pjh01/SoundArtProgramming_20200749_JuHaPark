@@ -127,52 +127,76 @@ function draw(){
       if(w/2+10 < touches[m].x && touches[m].x < (w/2+10)+blackWidth){
         fill(111);
         rect(w/2+10, 40, blackWidth, displayHeight/2-40);
+        wave8.freq(soundsChange[7]);
+        wave8.amp(_val, 0.5);
       }
       if((w+2*w)/2+10 < touches[m].x && touches[m].x < ((w+2*w)/2+10)+blackWidth){
         fill(111);
         rect((w+2*w)/2+10, 40, blackWidth, displayHeight/2-40);
+        wave9.freq(soundsChange[8]);
+        wave9.amp(_val, 0.5);
       }
       if((3*w+4*w)/2+10 < touches[m].x && touches[m].x < ((3*w+4*w)/2+10)+blackWidth){
         fill(111);
         rect((3*w+4*w)/2+10, 40, blackWidth, displayHeight/2-40);
+        wave10.freq(soundsChange[9]);
+        wave10.amp(_val, 0.5);
       }
       if((4*w+5*w)/2+10 < touches[m].x && touches[m].x < ((4*w+5*w)/2+10)+blackWidth){
         fill(111);
         rect((4*w+5*w)/2+10, 40, blackWidth, displayHeight/2-40);
+        wave11.freq(soundsChange[10]);
+        wave11.amp(_val, 0.5);
       }
       if((5*w+6*w)/2+10 < touches[m].x && touches[m].x < ((5*w+6*w)/2+10)+blackWidth){
         fill(111);
         rect((5*w+6*w)/2+10, 40, blackWidth, displayHeight/2-40);
+        wave12.freq(soundsChange[11]);
+        wave12.amp(_val, 0.5);
       }
     }
     if(displayHeight/2 < touches[m].y && touches[m].y < displayHeight-1 ){
       if(0 < touches[m].x && touches[m].x < w-1){
         fill(111);
         rect(0, displayHeight/2, w-1, displayHeight-1);
+        wave1.freq(soundsChange[0]);
+        wave1.amp(_val, 0.5);
       }
       if(w < touches[m].x && touches[m].x < (2*w)-1){
         fill(111);
         rect(w, displayHeight/2, w-1, displayHeight-1);
+        wave2.freq(soundsChange[1]);
+        wave2.amp(_val, 0.5);
       }
       if(2*w < touches[m].x && touches[m].x < (3*w)-1){
         fill(111);
         rect(2*w, displayHeight/2, w-1, displayHeight-1);
+        wave3.freq(soundsChange[2]);
+        wave3.amp(_val, 0.5);
       }
       if(3*w < touches[m].x && touches[m].x < (4*w)-1){
         fill(111);
         rect(3*w, displayHeight/2, w-1, displayHeight-1);
+        wave4.freq(soundsChange[3]);
+        wave4.amp(_val, 0.5);
       }
       if(4*w < touches[m].x && touches[m].x < (5*w)-1){
         fill(111);
         rect(4*w, displayHeight/2, w-1, displayHeight-1);
+        wave5.freq(soundsChange[4]);
+        wave5.amp(_val, 0.5);
       }
       if(5*w < touches[m].x && touches[m].x < (6*w)-1){
         fill(111);
         rect(5*w, displayHeight/2, w-1, displayHeight-1);
+        wave6.freq(soundsChange[5]);
+        wave6.amp(_val, 0.5);
       }
       if(6*w < touches[m].x && touches[m].x < (7*w)-1){
         fill(111);
         rect(6*w, displayHeight/2, w-1, displayHeight-1);
+        wave7.freq(soundsChange[6]);
+        wave7.amp(_val, 0.5);
       }
     }
   }
@@ -200,65 +224,41 @@ function touchStarted(){
     if(displayHeight/2 < touches[j].y && touches[j].y < displayHeight-1 ){
       if(0 < touches[j].x && touches[j].x < w-1){           //도
         wave1.start();
-        wave1.freq(soundsChange[0]);
-        wave1.amp(_val, 0.5);
       }
       if(w < touches[j].x && touches[j].x < (2*w)-1){       //레
         wave2.start();
-        wave2.freq(soundsChange[1]);
-        wave2.amp(_val, 0.5);
       }
       if(2*w < touches[j].x && touches[j].x < (3*w)-1){     //미
         wave3.start();
-        wave3.freq(soundsChange[2]);
-        wave3.amp(_val, 0.5);
       }
       if(3*w < touches[j].x && touches[j].x < (4*w)-1){     //파
         wave4.start();
-        wave4.freq(soundsChange[3]);
-        wave4.amp(_val, 0.5);
       }
       if(4*w < touches[j].x && touches[j].x < (5*w)-1){     //솔
         wave5.start();
-        wave5.freq(soundsChange[4]);
-        wave5.amp(_val, 0.5);
       }
       if(5*w < touches[j].x && touches[j].x < (6*w)-1){     //라
         wave6.start();
-        wave6.freq(soundsChange[5]);
-        wave6.amp(_val, 0.5);
       }
       if(6*w < touches[j].x && touches[j].x < (7*w)-1){     //시
         wave7.start();
-        wave7.freq(soundsChange[6]);
-        wave7.amp(_val, 0.5);
       }
     }
     if(40 < touches[j].y && touches[j].y < displayHeight/2){
       if(w/2+10 < touches[j].x && touches[j].x < (w/2+10)+blackWidth){                    //도#
         wave8.start();
-        wave8.freq(soundsChange[7]);
-        wave8.amp(_val, 0.5);
       }
       if((w+2*w)/2+10 < touches[j].x && touches[j].x < ((w+2*w)/2+10)+blackWidth){        //레#
         wave9.start();
-        wave9.freq(soundsChange[8]);
-        wave9.amp(_val, 0.5);
       }
       if((3*w+4*w)/2+10 < touches[j].x && touches[j].x < ((3*w+4*w)/2+10)+blackWidth){    //파#
         wave10.start();
-        wave10.freq(soundsChange[9]);
-        wave10.amp(_val, 0.5);
       }
       if((4*w+5*w)/2+10 < touches[j].x && touches[j].x < ((4*w+5*w)/2+10)+blackWidth){    //솔#
         wave11.start();
-        wave11.freq(soundsChange[10]);
-        wave11.amp(_val, 0.5);
       }
       if((5*w+6*w)/2+10 < touches[j].x && touches[j].x < ((5*w+6*w)/2+10)+blackWidth){    //라#
         wave12.start();
-        wave12.freq(soundsChange[11]);
-        wave12.amp(_val, 0.5);
       }
     }
   }

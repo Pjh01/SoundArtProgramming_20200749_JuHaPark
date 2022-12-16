@@ -26,7 +26,7 @@ function draw(){
   for (var i = 0; i < 7; i++) {
     var x = i * w;
     fill(255);
-    rect(x, displayHeight/2, w-1, displayHeight-1);
+    rect(x, displayHeight/2, w-1, (displayHeight/2)-1);
   }
   
   fill(0);
